@@ -83,8 +83,8 @@ function my_wp_ajax_noob_john_cena_ajax_callback(){
 	$first_name = isset( $_POST['first_name'] ) ? $_POST['first_name'] : 'N/A';
 	$last_name = isset( $_POST['last_name'] ) ? $_POST['last_name'] : 'N/A';
 	?>
-	<p>Hello. Your first name is <?php echo $first_name; ?>.</p>
-	<p>And your last name is <?php echo $last_name; ?>.</p>
+	<p>Hello. Your first name is <?php echo strip_tags( $first_name ); ?>.</p>
+	<p>And your last name is <?php echo strip_tags( $last_name ); ?>.</p>
 	<?php
 	wp_die(); // required. to end AJAX request.
 }
